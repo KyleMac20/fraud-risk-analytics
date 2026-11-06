@@ -55,3 +55,19 @@ INNER JOIN merchants AS m
     ON t.merchant_id = m.merchant_id
 GROUP BY m.category
 ORDER BY fraud_rate_pct DESC;
+
+
+-- Analysis 5: Flagged dollar volume by merchant category
+-- Identify categories with the greatest potential financial exposure.
+
+SELECT
+    m.category,
+    COUNT(*) AS fraud_transactions,
+    ROUND(SUM(t.amount), 2) AS fraud_amount,
+    ROUND(AVG(t.amount), 2) AS avg_fraud_amount
+FROM transactions AS t
+INNER JOIN merchants AS m
+    ON t.merchant_id = m.merchant_id
+WHERE t.fraud_flag = 1
+GROUP BY m.category
+ORDER BY fraud_amount DESC;
