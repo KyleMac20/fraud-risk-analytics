@@ -1,0 +1,9 @@
+merchant_id,category,risk_tier
+1,Grocery,Low
+2,Electronics,High
+3,Travel,High
+4,Gaming,Medium
+5,Clothing,Low
+6,Restaurants,Low
+7,Digital Goods,High
+8,Fuel,Low
