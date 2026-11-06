@@ -41,12 +41,22 @@ Refund transactions had a higher flagged fraud rate than purchases, while purcha
 
 These findings are preliminary and do not establish actual fraud losses or the effectiveness of existing fraud controls.
 
+### Merchant Category Risk Analysis
+
+Electronics had the highest flagged fraud rate (5.53%), followed by Digital Goods (5.38%) and Travel (5.12%).
+
+Digital Goods had the highest flagged transaction dollar volume ($4,497.79), followed by Electronics ($4,251.54) and Travel ($3,361.58).
+
+These three categories represented approximately 65.4% of flagged transactions and 66.9% of flagged dollar volume.
+
+**Preliminary recommendation:** Prioritize further investigation of these categories to identify suspicious transaction patterns and evaluate whether additional risk controls are warranted. These results do not establish confirmed losses.
+
 ## Project Roadmap
 
 - [x] Create and publish the simulated dataset
 - [x] Calculate baseline fraud metrics
 - [x] Compare fraud rates by transaction type
-- [ ] Analyze fraud by merchant category
+- [x] Analyze fraud by merchant category
 - [ ] Identify high-risk customer transaction patterns
 - [ ] Develop a Power BI dashboard
 - [ ] Document risk recommendations
