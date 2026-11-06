@@ -51,13 +51,21 @@ These three categories represented approximately 65.4% of flagged transactions a
 
 **Preliminary recommendation:** Prioritize further investigation of these categories to identify suspicious transaction patterns and evaluate whether additional risk controls are warranted. These results do not establish confirmed losses.
 
+### Customer-Level Risk Analysis
+
+Analysis identified 67 customer accounts with at least two flagged transactions. The highest number of flagged transactions associated with a single customer was four.
+
+Customer 131 had three flagged transactions totaling $686.67, while Customers 426 and 335 each had four flagged transactions but lower flagged dollar amounts.
+
+**Preliminary recommendation:** Investigate accounts with repeated flagged activity, prioritizing both transaction frequency and dollar exposure. Additional account and transaction context is necessary before determining whether intervention is warranted.
+
 ## Project Roadmap
 
 - [x] Create and publish the simulated dataset
 - [x] Calculate baseline fraud metrics
 - [x] Compare fraud rates by transaction type
 - [x] Analyze fraud by merchant category
-- [ ] Identify high-risk customer transaction patterns
+- [x] Identify high-risk customer transaction patterns
 - [ ] Develop a Power BI dashboard
 - [ ] Document risk recommendations
 
