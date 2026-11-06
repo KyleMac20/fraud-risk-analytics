@@ -71,3 +71,19 @@ INNER JOIN merchants AS m
 WHERE t.fraud_flag = 1
 GROUP BY m.category
 ORDER BY fraud_amount DESC;
+
+
+-- Analysis 6: Customers with Multiple Flagged Transactions
+-- Identify accounts with repeated flags and their potential dollar exposure.
+
+SELECT
+    c.customer_id,
+    COUNT(*) AS fraud_transactions,
+    ROUND(SUM(t.amount), 2) AS flagged_amount
+FROM customers AS c
+INNER JOIN transactions AS t
+    ON c.customer_id = t.customer_id
+WHERE t.fraud_flag = 1
+GROUP BY c.customer_id
+HAVING COUNT(*) >= 2
+ORDER BY fraud_transactions DESC, flagged_amount DESC;
